@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: e2e
+  name: e2e
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: e2e
+  template:
+    metadata:
+      labels:
+        app: e2e
+    spec:
+      containers:
+      - image: localhost:5001/e2e-test:latest
+        name: e2e
