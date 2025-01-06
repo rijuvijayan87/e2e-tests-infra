@@ -8,6 +8,5 @@ spec:
       containers:
         - name: pw-e2e
           image: rijuvijayan/pw-e2e
-          command: ["test"]
       restartPolicy: Never
   backoffLimit: 4
