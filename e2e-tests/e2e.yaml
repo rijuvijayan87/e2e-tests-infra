@@ -2,18 +2,18 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: e2e
-  name: e2e
+    app: e2e-tests
+  name: e2e-tests
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: e2e
+      app: e2e-tests
   template:
     metadata:
       labels:
-        app: e2e
+        app: e2e-tests
     spec:
       containers:
       - image: rijuvijayan/pw-e2e
-        name: e2e
+        name: e2e-tests
