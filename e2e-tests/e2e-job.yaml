@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: pw-e2e
+  generateName: pw-e2e-
 spec:
   template:
     spec:
@@ -9,4 +9,5 @@ spec:
         - name: pw-e2e
           image: rijuvijayan/pw-e2e
       restartPolicy: Never
+      ttlSecondsAfterFinished: 300
   backoffLimit: 4
