@@ -1,10 +1,10 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
-  name: argocd-job-patcher-binding
+  name: argocd-configmap-creator-binding
   namespace: e2e-tests
 roleRef:
-  name: argocd-job-patcher
+  name: argocd-configmap-creator
   kind: Role
 subjects:
   - kind: ServiceAccount

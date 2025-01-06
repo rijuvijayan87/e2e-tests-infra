@@ -8,7 +8,7 @@ spec:
       containers:
         - name: pw-e2e
           image: rijuvijayan/pw-e2e
-          args: ["$(TEST_ARGS)"]
+          args: ["test", "--grep=$(TEST_ARGS)"]
           env:
             - name: TEST_ARGS
               valueFrom:
