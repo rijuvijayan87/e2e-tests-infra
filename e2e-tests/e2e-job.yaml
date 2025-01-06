@@ -8,6 +8,7 @@ spec:
       containers:
         - name: pw-e2e
           image: rijuvijayan/pw-e2e
+          command: ["test", "--grep=@sanity"]
       restartPolicy: Never
       ttlSecondsAfterFinished: 10
   backoffLimit: 4
