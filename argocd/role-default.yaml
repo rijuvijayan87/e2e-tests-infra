@@ -8,6 +8,7 @@ rules:
       - batch
     resources:
       - jobs
+      - persistentvolumeclaims
     verbs:
       - create
       - update
