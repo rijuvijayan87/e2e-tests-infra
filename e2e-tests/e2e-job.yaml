@@ -10,5 +10,5 @@ spec:
           image: rijuvijayan/pw-e2e
           command: ["test", "--grep=@sanity"]
       restartPolicy: Never
-      ttlSecondsAfterFinished: 10
+      ttlSecondsAfterFinished: 60
   backoffLimit: 4
