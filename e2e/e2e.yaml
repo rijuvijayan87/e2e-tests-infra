@@ -15,5 +15,5 @@ spec:
         app: e2e
     spec:
       containers:
-      - image: localhost:5001/e2e-test:latest
+      - image: rijuvijayan/pw-e2e
         name: e2e
