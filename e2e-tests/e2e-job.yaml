@@ -1,4 +1,4 @@
-apiVersion: batch/v1/Job:pw-e2e
+apiVersion: batch/v1
 kind: Job
 metadata:
   name: pw-e2e
@@ -6,9 +6,8 @@ spec:
   template:
     spec:
       containers:
-      - name: pw-e2e
-        image: rijuvijayan/pw-e2e
+        - name: pw-e2e
+          image: rijuvijayan/pw-e2e
+          command: ["test", "--grep=@regression"]
       restartPolicy: Never
   backoffLimit: 4
-
-
