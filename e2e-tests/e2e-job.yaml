@@ -8,7 +8,13 @@ spec:
       containers:
         - name: pw-e2e
           image: rijuvijayan/pw-e2e
-          args: ["test", "--grep=@smoke"]
+          args: ["$(TEST_ARGS)"]
+          env:
+            - name: TEST_ARGS
+              valueFrom:
+                configMapKeyRef:
+                  name: test-args
+                  key: test-args
       restartPolicy: Never
       ttlSecondsAfterFinished: 60
   backoffLimit: 4
