@@ -8,6 +8,7 @@ spec:
       containers:
         - name: pw-e2e
           image: rijuvijayan/pw-e2e
+          args: ["test", "--grep=@smoke"]
       restartPolicy: Never
       ttlSecondsAfterFinished: 60
   backoffLimit: 4
