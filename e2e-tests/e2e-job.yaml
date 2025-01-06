@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: pw-e2e
+spec:
+  template:
+    spec:
+      containers:
+      - name: pw-e2e
+        image: rijuvijayan/pw-e2e
+      restartPolicy: Never
+  backoffLimit: 4
+
+
