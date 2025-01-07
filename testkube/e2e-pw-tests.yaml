@@ -18,5 +18,5 @@ spec:
     - name: Run tests
       shell: pnpm run test:smoke
       artifacts:
-      paths:
-        - /e2e/playwright-report/**/*
+        paths:
+          - /e2e/playwright-report/**/*
