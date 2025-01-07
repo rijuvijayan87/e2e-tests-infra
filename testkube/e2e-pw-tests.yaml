@@ -17,3 +17,6 @@ spec:
   steps:
     - name: Run tests
       shell: pnpm run test:smoke
+      artifacts:
+      paths:
+        - playwright-report/**/*
