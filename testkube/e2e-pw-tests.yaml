@@ -6,12 +6,6 @@ metadata:
   labels:
     docs: example
 spec:
-  content:
-    git:
-      uri: https://github.com/rijuvijayan87/e2e-tests-infra
-      revision: main
-      paths:
-        - test
   container:
     container:
     workingDir: /e2e
