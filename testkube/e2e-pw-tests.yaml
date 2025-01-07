@@ -22,8 +22,5 @@ spec:
         memory: 2Gi
   steps:
     - name: Run tests
-      shell: test --grep=@sanity
-      artifacts:
-        paths:
-          - playwright-report/**/*
+      shell: test --grep=@regression
 status: {}
