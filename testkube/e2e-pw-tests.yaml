@@ -22,4 +22,4 @@ spec:
         memory: 2Gi
   steps:
     - name: Run tests
-      shell: test --grep=@regression
+      shell: pnpm run test:smoke
