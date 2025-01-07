@@ -16,5 +16,4 @@ spec:
                   name: test-args
                   key: test-args
       restartPolicy: Never
-      ttlSecondsAfterFinished: 60
   backoffLimit: 4
