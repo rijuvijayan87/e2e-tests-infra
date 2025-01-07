@@ -23,4 +23,3 @@ spec:
   steps:
     - name: Run tests
       shell: test --grep=@regression
-status: {}
