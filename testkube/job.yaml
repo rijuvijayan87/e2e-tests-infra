@@ -43,6 +43,6 @@ spec:
                 --org-id ${ORGANISATION_ID} \
                 --env-id ${ENVIRONMENT_ID}
 
-              testkube run tw basic-playwright-workflow -f
+              testkube run tw e2e-playwright-workflow -f
       restartPolicy: Never
   backoffLimit: 2
