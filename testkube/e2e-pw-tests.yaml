@@ -19,4 +19,4 @@ spec:
       shell: pnpm run test:smoke
       artifacts:
       paths:
-        - playwright-report/**/*
+        - /e2e/playwright-report/**/*
