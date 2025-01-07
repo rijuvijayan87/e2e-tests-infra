@@ -1,7 +1,7 @@
 kind: TestWorkflow
 apiVersion: testworkflows.testkube.io/v1
 metadata:
-  name: basic-playwright-workflow
+  name: e2e-playwright-workflow
   namespace: testkube
   labels:
     docs: example
