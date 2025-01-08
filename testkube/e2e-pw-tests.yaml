@@ -4,16 +4,24 @@ metadata:
   name: e2e-playwright-workflow
   namespace: testkube
   labels:
+    app.kubernetes.io/instance: testkube-workflow
     docs: example
 spec:
   container:
-    container:
     workingDir: /e2e
     image: rijuvijayan/pw-e2e
+    imagePullPolicy: Always
     resources:
       requests:
         cpu: 2
         memory: 2Gi
   steps:
     - name: Run tests
-      shell: pnpm run test:smoke
+      shell: |
+        pnpm run test:smoke
+        cp -r ${PWD}/playwright-report /data/playwright-report
+    - name: Uploading test results
+      artifacts:
+        paths:
+          - /data/playwright-report/**/*
+status: {}
