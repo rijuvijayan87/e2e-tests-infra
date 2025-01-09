@@ -8,7 +8,7 @@ metadata:
     docs: example
 spec:
   config:
-    SUITE_NAME:
+    SUITE_NAME (smoke, regression, integration):
       type: string
       default: smoke
   container:
