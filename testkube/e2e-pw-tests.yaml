@@ -7,6 +7,10 @@ metadata:
     app.kubernetes.io/instance: testkube-workflow
     docs: example
 spec:
+  config:
+    SUITE_NAME:
+      type: string
+      default: smoke
   container:
     workingDir: /e2e
     image: rijuvijayan/pw-e2e
@@ -18,10 +22,9 @@ spec:
   steps:
     - name: Run tests
       shell: |
-        pnpm run test:smoke
+        pnpm run test:{{ config.SUITE_NAME }}
         cp -r ${PWD}/playwright-report /data/playwright-report
     - name: Uploading test results
       artifacts:
         paths:
           - /data/playwright-report/**/*
-status: {}
