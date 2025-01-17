@@ -1,0 +1,17 @@
+services:
+  server-app:
+    build: ./server-app
+    ports:
+      - "9222:9222"
+    environment:
+      - NODE_ENV=production
+
+  client-app:
+    build: ./client-app
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - EXPRESS_SERVER_URL=http://server-app:9222
+    depends_on:
+      - server-app
