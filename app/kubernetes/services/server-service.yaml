@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: server-app
+  namespace: server-endpoints
+spec:
+  selector:
+    app: server-app
+  ports:
+    - name: http
+      port: 9222
+      targetPort: 9222
+  type: ClusterIP
