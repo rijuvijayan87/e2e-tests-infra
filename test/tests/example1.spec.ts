@@ -30,7 +30,7 @@ test("has title 3", { tag: "@sanity" }, async ({ page }) => {
 
 test("has title 4", { tag: "@smoke" }, async ({ page }) => {
   await page.goto("https://playwright.dev/");
-
+  await page.waitForTimeout(5 * 1000 * 60); // Wait for 1 minute
   // Expect a title "to contain" a substring.
   await expect(page).toHaveTitle(/Playwright/);
 });
